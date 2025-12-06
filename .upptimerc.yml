@@ -1,36 +1,84 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Brew Guide APP 状态监控配置
+owner: chuthree # GitHub 用户名
+repo: upptime # 仓库名
+
+user-agent: chuthree
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Test Broken Site
-    url: https://thissitedoesnotexist.koj.co
-  - name: IPv6 test
-    url: forwardemail.net
-    port: 80
-    check: "tcp-ping"
-    ipv6: true
+  # ===== Brew Guide 网页服务 =====
+  - name: Brew Guide 主站
+    url: https://coffee.chu3.top
+    maxResponseTime: 5000
+    icon: https://coffee.chu3.top/favicon.ico
+
+  - name: Brew Guide 帮助中心
+    url: https://help.chu3.top
+    maxResponseTime: 5000
+    icon: https://help.chu3.top/favicon.ico
+
+  # ===== Brew Guide API 服务 =====
+  - name: Brew Guide Health API
+    url: https://chu3.top/health
+    maxResponseTime: 3000
+    expectedStatusCodes:
+      - 200
+
+  - name: CORS 代理服务
+    url: https://cors.chu3.top/raw?url=https://example.com
+    maxResponseTime: 10000
+    expectedStatusCodes:
+      - 200
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: upptime.chu3.top  # 如果你有自定义域名，否则注释掉这行并取消下面 baseUrl 的注释
+  # baseUrl: /upptime
+  logoUrl: https://coffee.chu3.top/favicon.ico
+  name: Brew Guide 状态监控
+  theme: dark
+  introTitle: "**Brew Guide** 服务状态监控"
+  introMessage: 此页面实时监控 Brew Guide APP 相关服务的可用性，数据来源于 [GitHub 仓库](https://github.com/chuthree/upptime)。
   navbar:
-    - title: Status
+    - title: 状态
       href: /
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
+    - title: Brew Guide
+      href: https://coffee.chu3.top
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+# 中文国际化
+i18n:
+  activeIncidents: 当前故障
+  allSystemsOperational: 所有系统运行正常
+  incidentReport: "故障报告 $NUMBER"
+  checksRecently: "最近检查 $DATE"
+  uptime: 可用性
+  responseTime: 响应时间
+  ms: 毫秒
+  loading: 加载中...
+  overallUptime: 总体可用性
+  averageResponseTime: 平均响应时间
+  liveStatus: 实时状态
+  incident: 故障
+  incidentDetails: 故障详情
+  incidentFixed: 故障已修复
+  incidentOngoing: 故障进行中
+  incidentDegraded: 服务降级
+  incidentDown: 服务中断
+  incidentUp: 服务正常
+  incidentScheduled: 计划维护
+  degradedPerformance: 性能降级
+  completeOutage: 完全中断
+  partialOutage: 部分中断
+  majorOutage: 重大中断
+  noIncidents: 无故障
+  pastIncidents: 历史故障
+  scheduledMaintenance: 计划维护
+  noScheduledMaintenance: 无计划维护
+  footer: "本状态页由 [Upptime](https://upptime.js.org) 提供支持"
+
+# 分配问题给维护者（可选）
+assignees:
+  - chuthree
+
+# 通知配置（可选，需要在 GitHub Secrets 中配置）
+# 参见 https://upptime.js.org/docs/notifications
