@@ -114,5 +114,11 @@ i18n:
 assignees:
   - chuthree
 
-# 通知配置（可选，需要在 GitHub Secrets 中配置）
-# 参见 https://upptime.js.org/docs/notifications
+# 通知配置 - Server酱微信推送
+notifications:
+  - type: webhook
+    url: https://sctapi.ftqq.com/$NOTIFICATION_SERVERCHAN_KEY.send
+    method: POST
+    headers:
+      Content-Type: application/x-www-form-urlencoded
+    body: "title=$SITE_NAME 服务异常&desp=### 服务状态变更%0A%0A- **站点**: $SITE_NAME%0A- **状态**: $SITE_STATUS%0A- **URL**: $SITE_URL%0A- **时间**: $DATE"
