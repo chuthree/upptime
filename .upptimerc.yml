@@ -47,34 +47,68 @@ status-website:
 
 # 中文国际化
 i18n:
+  locale: zh-CN
   activeIncidents: 当前故障
   allSystemsOperational: 所有系统运行正常
-  incidentReport: "故障报告 $NUMBER"
-  checksRecently: "最近检查 $DATE"
+  incidentReport: "故障报告 #$NUMBER →"
+  activeIncidentSummary: "于 $DATE 开启，共 $POSTS 条更新"
+  incidentTitle: "故障 $NUMBER 详情"
+  checksRecently: "最近检查于 $DATE"
   uptime: 可用性
   responseTime: 响应时间
-  ms: 毫秒
+  ms: ms
   loading: 加载中...
-  overallUptime: 总体可用性
-  averageResponseTime: 平均响应时间
+  overallUptime: "总体可用性: $UPTIME"
+  overallUptimeTitle: 总体可用性
+  averageResponseTime: "平均响应时间: $TIME ms"
+  averageResponseTimeTitle: 平均响应时间
+  sevelDayResponseTime: 7天响应时间
+  responseTimeMs: 响应时间 (ms)
+  up: 正常
+  down: 故障
+  degraded: 降级
   liveStatus: 实时状态
   incident: 故障
   incidentDetails: 故障详情
-  incidentFixed: 故障已修复
-  incidentOngoing: 故障进行中
+  incidentFixed: 已修复
+  incidentOngoing: 进行中
+  incidentOpenedAt: 开始于
+  incidentClosedAt: 结束于
+  incidentViewOnGitHub: 在 GitHub 上查看和订阅
+  incidentCommentSummary: "由 $AUTHOR 于 $DATE 发布"
+  incidentBack: ← 返回故障列表
   incidentDegraded: 服务降级
   incidentDown: 服务中断
   incidentUp: 服务正常
   incidentScheduled: 计划维护
+  incidentCompleted: 已完成
   degradedPerformance: 性能降级
   completeOutage: 完全中断
   partialOutage: 部分中断
   majorOutage: 重大中断
   noIncidents: 无故障
   pastIncidents: 历史故障
+  pastIncidentsResolved: "在 $MINUTES 分钟内解决，共 $POSTS 条更新"
   scheduledMaintenance: 计划维护
+  pastScheduledMaintenance: 历史计划维护
+  scheduledMaintenanceSummaryStarted: "开始于 $DATE，持续 $DURATION 分钟"
+  scheduledMaintenanceSummaryStarts: "将于 $DATE 开始，持续 $DURATION 分钟"
+  startedAt: 开始于
+  startsAt: 将开始于
+  duration: 持续时间
+  durationMin: "$DURATION 分钟"
+  duration24H: 24小时
+  duration7D: 7天
+  duration30D: 30天
+  duration1Y: 1年
+  durationAll: 全部
   noScheduledMaintenance: 无计划维护
+  navGitHub: GitHub
   footer: "本状态页由 [Upptime](https://upptime.js.org) 提供支持"
+  errorTitle: 发生错误
+  errorIntro: 获取最新状态时发生错误
+  errorText: 请稍后重试
+  errorHome: 返回首页
 
 # 分配问题给维护者（可选）
 assignees:
