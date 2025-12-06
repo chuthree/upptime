@@ -30,7 +30,7 @@ sites:
       - 200
 
 status-website:
-  cname: upptime.chu3.top  # 如果你有自定义域名，否则注释掉这行并取消下面 baseUrl 的注释
+  cname: status.chu3.top  # 状态监控页面域名
   # baseUrl: /upptime
   logoUrl: https://coffee.chu3.top/favicon.ico
   name: Brew Guide 状态监控
