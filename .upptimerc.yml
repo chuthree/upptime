@@ -18,7 +18,7 @@ sites:
 
   # ===== Brew Guide API 服务 =====
   - name: Brew Guide Health API
-    url: https://chu3.top/health
+    url: https://api.chu3.top/health
     maxResponseTime: 3000
     expectedStatusCodes:
       - 200
