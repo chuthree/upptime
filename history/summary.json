@@ -4,9 +4,9 @@
     "url": "https://coffee.chu3.top",
     "icon": "https://coffee.chu3.top/favicon.ico",
     "slug": "brew-guide",
-    "status": "up",
+    "status": "down",
     "uptime": "99.63%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.97%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "99.61%",
     "uptimeYear": "99.63%",
@@ -16,6 +16,7 @@
     "timeMonth": 886,
     "timeYear": 892,
     "dailyMinutesDown": {
+      "2026-01-07": 0,
       "2025-12-23": 45,
       "2025-12-12": 109,
       "2025-12-10": 15
@@ -26,9 +27,9 @@
     "url": "https://help.chu3.top",
     "icon": "https://help.chu3.top/favicon.ico",
     "slug": "brew-guide",
-    "status": "up",
+    "status": "down",
     "uptime": "99.63%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.97%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "99.61%",
     "uptimeYear": "99.63%",
@@ -38,6 +39,7 @@
     "timeMonth": 886,
     "timeYear": 892,
     "dailyMinutesDown": {
+      "2026-01-07": 0,
       "2025-12-23": 45,
       "2025-12-12": 109,
       "2025-12-10": 15
